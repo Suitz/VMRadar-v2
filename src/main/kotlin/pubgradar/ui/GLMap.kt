@@ -911,6 +911,30 @@ class GLMap : InputAdapter(), ApplicationListener, GameListener {
 
             val (actor, x, y, dir) = it
             val (sx, sy) = Vector2(x, y).mapToWindow()
+            val teamId = isTeamMate(actor)
+
+            if (teamId > 0) {
+
+                // Can't wait for the "Omg Players don't draw issues
+                spriteBatch.draw(
+                        teamarrow,
+                        sx, windowHeight - sy - 2, 4.toFloat() / 2,
+                        4.toFloat() / 2, 4.toFloat(), 4.toFloat(), 5f, 5f,
+                        dir * -1, 0, 0, 64, 64, true, false)
+
+                if (toggleView == 1) {
+                    spriteBatch.draw(
+                            teamsight,
+                            sx + 1, windowHeight - sy - 2,
+                            2.toFloat() / 2,
+                            2.toFloat() / 2,
+                            12.toFloat(), 2.toFloat(),
+                            10f, 10f,
+                            dir * -1, 0, 0, 512, 64, true, false)
+                }
+
+            } else {
+
                 spriteBatch.draw(
                         arrow,
                         sx, windowHeight - sy - 2, 4.toFloat() / 2,
@@ -927,6 +951,7 @@ class GLMap : InputAdapter(), ApplicationListener, GameListener {
                             10f, 10f,
                             dir * -1, 0, 0, 512, 64, true, false)
                 }
+            }
 
         }
     }
