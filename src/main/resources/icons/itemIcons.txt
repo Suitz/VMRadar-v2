@@ -61,7 +61,7 @@ Item_Armor_D_01_Lv2_C
   index: -1
 Item_Armor_E_01_Lv1_C
   rotate: false
-  xy: 128, 64
+  xy: 448, 64
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
@@ -257,14 +257,14 @@ Item_Back_C_02_Lv3_C
   index: -1
 Item_Back_E_01_Lv1_C
   rotate: false
-  xy: 0, 0
+    xy: 64, 448
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
   index: -1
 Item_Back_E_02_Lv1_C
   rotate: false
-  xy: 0, 64
+    xy: 64, 448
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
@@ -320,14 +320,14 @@ Item_Ghillie_02_C
   index: -1
 Item_Head_E_01_Lv1_C
   rotate: false
-  xy: 0, 0
+    xy: 384, 64
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
   index: -1
 Item_Head_E_02_Lv1_C
   rotate: false
-  xy: 0, 0
+  xy: 384, 64
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
