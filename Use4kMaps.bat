@@ -1,4 +1,8 @@
 @echo off
+setlocal
+:PROMPT
+SET /P AREYOUSURE=ARE YOU SURE YOU WANT TO CHANGE TO THE 4K MAPS? (Y/[N])?
+IF /I "%AREYOUSURE%" NEQ "Y" GOTO END
 
 
 ren src\main\resources\maps\Erangel_Minimap.png Erangel_8k.png
@@ -28,4 +32,6 @@ echo "Done! You can now build with the 4k Maps, DONT RUN THIS AGAIN BEFORE RUNNI
 echo "Done! You can now build with the 4k Maps, DONT RUN THIS AGAIN BEFORE RUNNING USE8kMAPS."
 echo "Done! You can now build with the 4k Maps, DONT RUN THIS AGAIN BEFORE RUNNING USE8kMAPS."
 
+
+:END
 pause
