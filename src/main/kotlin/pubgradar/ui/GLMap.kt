@@ -100,7 +100,7 @@ class GLMap : InputAdapter(), ApplicationListener, GameListener {
 
     fun show() {
         val config = Lwjgl3ApplicationConfiguration()
-        config.setTitle("[${localAddr.hostAddress} ${sniffOption.name}] - PUBG Radar By AiYinZiLeGong")
+        config.setTitle("[${localAddr.hostAddress} ${sniffOption.name}] - VMRadar v1.2.1")
         config.setWindowIcon(Files.FileType.Internal, "icon.png")
         config.useOpenGL3(true, 3, 3)
         config.setWindowedMode(initialWindowWidth.toInt(), initialWindowWidth.toInt())
@@ -180,10 +180,10 @@ class GLMap : InputAdapter(), ApplicationListener, GameListener {
     private var drawcompass = -1
     private var drawmenu = 1
     private var toggleView = 1
-    private var drawDaMap = -1
+    private var drawDaMap = 1
     // private var toggleVehicles = -1
     //  private var toggleVNames = -1
-    private var drawgrid = -1
+    private var drawMinimap = -1
     private var nameToggles = 4
     private var VehicleInfoToggles = 1
     private var ZoomToggles = 1
@@ -305,7 +305,7 @@ class GLMap : InputAdapter(), ApplicationListener, GameListener {
             }
         // Other Filter Keybinds
             F2 -> drawcompass = drawcompass * -1
-        //        F3 -> drawgrid = drawgrid * -1
+
 
         // Toggle View Line
             F4 -> toggleView = toggleView * -1
@@ -795,7 +795,7 @@ class GLMap : InputAdapter(), ApplicationListener, GameListener {
                 else
                     menuFontOn.draw(spriteBatch, "Enabled", 187f, windowHeight / 2 + -107f)
 
-                // Grid
+
                 if (drawDaMap == 1)
 
                     menuFontOn.draw(spriteBatch, "Enabled", 187f, windowHeight / 2 + -125f)
@@ -871,8 +871,10 @@ class GLMap : InputAdapter(), ApplicationListener, GameListener {
         Gdx.gl.glDisable(GL20.GL_BLEND)
         clipBound.set(miniMapRegion)
         camera = miniMapCamera
-        drawMiniMap(parachutes, players, vehicles)
-    }
+
+        if (drawDaMap == 1) {
+            drawMiniMap(parachutes, players, vehicles)
+        }}
 
   private fun ShapeRenderer.drawPlayersH(players:ArrayList<renderInfo>?) {
       //draw self

@@ -4,9 +4,9 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>AiYinZiLeGong</groupId>
-    <artifactId>pubg-radar</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <groupId>VMRadar</groupId>
+    <artifactId>VMRadar</artifactId>
+    <version>1.2.1</version>
 
     <properties>
         <libGdx.version>1.9.6</libGdx.version>

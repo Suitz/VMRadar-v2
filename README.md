@@ -1,6 +1,6 @@
 #### By engaging with this repository you explicitly agree with the terms of the Unlicense.
 
-![Discord for updates](https://i.imgur.com/gUFVsxQ.jpg)
+![Imgur](https://i.imgur.com/PDjwkyR.jpg)
 
 
 join us on [Discord for updates](https://discord.me/radarproject)
